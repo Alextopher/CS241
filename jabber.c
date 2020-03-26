@@ -59,13 +59,15 @@ void jabber( FILE *ifp, FILE *ofp ) {
 
 	int index = 0;
        	int bits = 0;
-	for (int i = 0; i < sz; ++i) {
+	int i;
+	for (i = 0; i < sz; ++i) {
 		char c = buffer[i];
 
 		if (c == '0') {
 			if (cursor -> zero == NULL) {
 				// Print index
-				for (int j = bits - 1; j >= 0; --j) {
+				int j;
+				for (j = bits - 1; j >= 0; --j) {
 					fputc('0' + ((cursor -> index >> j) & 1), ofp);
 				}
 				
@@ -82,7 +84,8 @@ void jabber( FILE *ifp, FILE *ofp ) {
 		} else if (c == '1') {
 			if (cursor -> one == NULL) {
 				// Print index
-				for (int j = bits - 1; j >= 0; --j) {
+				int j;
+				for (j = bits - 1; j >= 0; --j) {
 					fputc('0' + ((cursor -> index >> j) & 1), ofp);
 				}
 				
@@ -110,13 +113,16 @@ void jabber( FILE *ifp, FILE *ofp ) {
 	}
 
 	// Final index
-	for (int j = bits - 1; j >= 0; --j) {
+	int j;
+	for (j = bits - 1; j >= 0; --j) {
 		fputc('0' + ((cursor -> index >> j) & 1), ofp);
 	}
 
 	//printTree(root, 0);
 }
 
+
+int rec[1];
 //int rec[1000000];
 void printTree(node * curr, int depth)
 {

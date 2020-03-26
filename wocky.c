@@ -66,7 +66,8 @@ void wocky ( FILE *ifp, FILE *ofp ) {
 	int read = 0; // Number of bits currently read
 
 	char c;
-	for (int i = 0; i <= sz; ++i) {
+	int i;
+	for (i = 0; i <= sz; ++i) {
 		c = buffer[i];
 		if (read == length) {
 			// Print prefix at index
@@ -76,7 +77,8 @@ void wocky ( FILE *ifp, FILE *ofp ) {
 			if (t_length == t_capacity) {
 				// Double capacity
 				element ** new_table = malloc(2 * t_capacity * sizeof(element*));
-				for (int j = 0; j < t_capacity; ++j) {
+				int j;
+				for (j = 0; j < t_capacity; ++j) {
 					new_table[j] = table[j];
 				}
 				free(table);
