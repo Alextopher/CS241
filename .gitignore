@@ -1,3 +1,14 @@
-bin/*
+atob
+jabber
+wocky
+btoa
 
-*.txt
+atob.o
+jabber.o
+wocky.o
+btoa.o
+
+bit-*.txt
+kapow-*.txt
+zap-*.txt
+out.txt
