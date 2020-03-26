@@ -114,10 +114,10 @@ void jabber( FILE *ifp, FILE *ofp ) {
 		fputc('0' + ((cursor -> index >> j) & 1), ofp);
 	}
 
-	printTree(root, 0);
+	//printTree(root, 0);
 }
 
-int rec[1000000];
+//int rec[1000000];
 void printTree(node * curr, int depth)
 {
     int i;

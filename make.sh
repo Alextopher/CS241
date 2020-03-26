@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Make binary folder
+mkdir bin
+
 # Compile
 gcc atob.c -g -o bin/atob
 gcc jabber.c -g -o bin/jabber
