@@ -17,7 +17,7 @@ Ryan and I worked together on implementing Jabber but we wrote our own code.
 
 I wrote wocky alone and once again used the "each prefix = some previous prefix + 1 bit" property. Since at each step we read an index (integer) and find the prefix (string) at that index an array of cstrings would be sufficent. `char ** table = malloc(size * sizeof(char*))`. This can be done more memory efficently. Instead of storing cstrings I store a pointer to the previous prefix and 1 character representing the 1 new bit. 
 
-![](table.jpg)
+![](table.png)
 
 Printing becomes a little more complicated since we can no longer just fprintf a cstring. All it requires is a little bit of recursive decent, unfortunately this can't be written tail recursively. 
 
