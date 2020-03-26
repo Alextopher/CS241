@@ -1,5 +1,4 @@
 # Jabberwocky
-In order to run my code you can simply call `./make.sh <file>`. The files `bit.txt`, `zap.txt`, `kapow.txt` and `out.txt` will be generated in order. The directory texts has some examples.
 
 My implementation for both jabber and wocky used the same fact about our compression table. Every prefix we add to our table was one bit appended to some previously seen prefix. This allows for some cool data structures.
 
